@@ -18,19 +18,7 @@ switch(ENGINE)
             end
         end
     end
-    [F_peaks] = rounder(F_peaks);                                   %rotunjim frecventele gasite utilizand rounder
-    case 'autoCorr'
-        density_power = 0;
-        %Rxx = zeros(2*length(x_frm(:,1)),1);
-        %n   = zeros(1,2*length(x_frm(:,1)));
-
-n_frm = 4096;
-X_FRM = zeros(n_frm,1);
-y_frm = zeros(length(x_frm(:,1)),1);
-%Ryy = zeros(2*length(y_frm(:,1)),1);
-%w = zeros(1,2*length(y_frm(:,1)));
-k = 0;
-j = 0;
+[F_peaks] = rounder(F_peaks);                                   %rotunjim frecventele gasite utilizand rounder
 
 for i = 1:1:length(x_frm(1,:))
     density_power = getPow(x_frm(:,i));
