@@ -1,8 +1,4 @@
 function [Fr] = rounder(Fx)
-% Keep in mind that the only frequencies used are listed below
-% The endopint aproximation for 262 is [250, 270] and for 1047 is [1014,1100]
-% The other frequencies are rounded based on which half between the lower
-% and higher frequency the measured one is located
 F = [262, 277, 294, 311, 330, 349, 370, 392, 415, 440, 466, 494, 523, 554, 587, 622, 659, 698, 740, 784, 831, 880, 932, 988, 1047];
 for i = 1:1:length(Fx(1,:))
     if (Fx(1,i) >= 250) && (Fx(1,i) <= 270)
